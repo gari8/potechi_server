@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+  potechi:
+    container_name: potechi
+    build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /workspace
+    ports:
+      - "3000:50051"
+    stdin_open: true
+    tty: true
